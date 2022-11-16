@@ -110,8 +110,11 @@ export interface IImagesData {
     width?: number
 }
 
-export interface ImagesState {
-    images: IImagesData[],
-    isLoading: boolean,
-    error: string
+export interface ImageProps {
+    imageData?: IImagesData
 }
+
+export interface CurrentImageProps {
+    currentImage?: IImagesData
+}
+

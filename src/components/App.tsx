@@ -1,16 +1,17 @@
 import React from 'react';
-import { useGetImgByTokenQuery } from "../store/services/imgApi";
+import { Route, Routes } from "react-router-dom";
+import { FirstPage } from "../pages/FirstPage";
+import { SecondPage } from "../pages/SecondPage";
 
 
 export function App(): JSX.Element {
-    const { data, isLoading, error } = useGetImgByTokenQuery("");
-
-    console.log(data)
-
 
     return (
         <>
-            work
+            <Routes>
+                <Route path="/" element={ <FirstPage /> } />
+                <Route path='/:id' element={ <SecondPage /> } />
+            </Routes>
         </>
     );
 }
